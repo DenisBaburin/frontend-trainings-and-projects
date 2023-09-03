@@ -1,15 +1,22 @@
+import { useState } from 'react'
 import styles from './CreateCarForm.module.css'
 
 const CreateCarForm = () => {
-  return (
-    <form className={styles.form}>
-        <input placeholder='Name'/>
-        <input placeholder='Price'/>
-        <input placeholder='Image'/>
+    const [name, setName] = useState('')
 
-        <button>Create</button>
-    </form>
-  )
+    const createCar = () => {
+        console.log(name)
+    }
+
+    return (
+        <form className={styles.form}>
+            <input placeholder='Name'/>
+            <input placeholder='Price'/>
+            <input placeholder='Image'/>
+
+            <button>Create</button>
+        </form>
+    )
 }
 
 export default CreateCarForm
